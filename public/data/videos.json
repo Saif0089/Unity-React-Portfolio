@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Haki Scaffolding Simulation",
+    "url": "https://www.youtube.com/embed/_Wz9zB2GO4o",
+    "description": "An exciting VR experience to simulate different body organs for the audiance.",
+    "techStack": ["Unity", "C#", "Photon Networking", "Azure", "VR Headsets"]
+  },
+  {
+    "title": "AvaSci",
+    "url": "https://www.youtube.com/embed/--Q8dnqMXy4",
+    "description": "Avatar and Science. Get detailed data about all the joints of your body and consult with your doctor",
+    "techStack": ["Unity", "C#", "Photon Networking", "Azure", "VR Headsets"]
+  },
+  {
+    "title": "VR Basketball Game",
+    "url": "https://www.youtube.com/embed/9Ka3AzRLSkA",
+    "description": "A multiplayer basket ball game to play on any VR headset",
+    "techStack": ["Unity", "C#", "Photon Networking", "Azure", "VR Headsets"]
+  },
+  {
+    "title": "Soul of King",
+    "url": "https://www.youtube.com/embed/IwrKOx1Qz0E",
+    "description": "A multiplayer MOBA (Online Multiple Battle Arena) Based on SouthAfrican theme.",
+    "techStack": ["Unity", "C#", "Photon Networking", "Azure", "VR Headsets"]
+  },
+  {
+    "title": "Unity Point Cloud Viewer",
+    "url": "https://www.youtube.com/embed/xcvcpT9RGLg",
+    "description": "Creating an import system that reads point cloud recorded data recorded from high tech cameras.",
+    "techStack": ["Unity", "C#", "3D Modeling", "Multiplayer"]
+  },
+  {
+    "title": "Kinect Infinite Runner Game",
+    "url": "https://www.youtube.com/embed/kLL-it-7ho0",
+    "description": "Kinect based runner game user can stand infront of camera and move left and right to make the character move",
+    "techStack": ["Unity", "C#", "3D Modeling", "Multiplayer"]
+  },
+  {
+    "title": "Hyper Casual Game",
+    "url": "https://www.youtube.com/embed/waUi60HNJ4A",
+    "description": "A simple game with minimal stack.",
+    "techStack": ["Unity", "C#", "3D Modeling", "Multiplayer"]
+  }
+]

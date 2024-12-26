@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-black text-gray-300;
+  
+}
+h1, h2, h3 {
+  @apply text-gray-100;
+}
+
+a {
+  @apply text-gray-300 hover:text-gray-400;
+}
+@keyframes flyAway {
+  to {
+    transform: translate(var(--x), var(--y)) rotate(45deg) scale(0.5);
+    opacity: 0;
+  }
+}
+#parallax-bg {
+  background-image: url('./background.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform; /* Optimize for performance */
+  z-index: 0;
+}
+.animate-flyAway {
+  animation: flyAway 1s ease-in-out forwards;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.trail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fade-out 0.5s ease-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+.click-effect {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 123, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: click-burst 0.5s ease-out;
+}
+
+@keyframes click-burst {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
