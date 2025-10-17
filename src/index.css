@@ -138,3 +138,22 @@ code {
   /* If a flex container is clipping text, allow children to shrink */
   .flex > * { min-width: 0; }
 }
+/* --- Mobile text wrapping fix for About page (and similar) --- */
+@media (max-width: 640px) {
+  /* Ensure normal wrapping */
+  p, li, span, a, h1, h2, h3, h4, h5, h6, blockquote {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  /* If characters were forced to block-level spans, bring them back inline */
+  p > span,
+  h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span {
+    display: inline !important;
+  }
+
+  /* If a flex container is clipping text, allow children to shrink */
+  .flex > * { min-width: 0; }
+}
