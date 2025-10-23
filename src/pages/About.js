@@ -104,13 +104,13 @@ function About() {
                     muted
                 ></video>
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
-                    <h1 className="text-5xl font-bold text-white text-center">Welcome to My Gaming World</h1>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">Welcome to My Gaming World</h1>
                 </div>
             </div>
             {/* Existing About Content */}
-            <div className="bg-black bg-opacity-50 p-12 px-96 rounded-lg shadow-lg text-center">
-                <h1 className="text-4xl font-bold text-gray-100 mb-6">A little About Me</h1>
-                <p className="text-gray-200 text-lg mb-8">
+            <div className="bg-black bg-opacity-50 px-6 py-12 sm:px-12 md:px-16 lg:px-24 xl:px-32 max-w-5xl mx-auto rounded-lg shadow-lg text-center">
+                <h1 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-6">A little About Me</h1>
+                <p className="text-gray-200 text-base sm:text-lg mb-8">
                     Hi, my name is Saif Ur Rehman. I am a passionate Unity game developer with a keen eye for detail and
                     a drive to create immersive gaming experiences.
                     From multiplayer battles to VR adventures, I specialize in bringing innovative ideas to life.
@@ -118,7 +118,7 @@ function About() {
 
                 {/* Skillset Section */}
                 <h2 className="text-3xl font-bold text-gray-100 mb-4">My Expertise</h2>
-                <ul className="text-gray-200 text-lg leading-loose list-disc list-inside mb-8 text-left">
+                <ul className="text-gray-200 text-base sm:text-lg leading-loose list-disc list-inside mb-8 text-left">
                     <li>Developing multiplayer games using Unity's server-based architecture</li>
                     <li>Creating immersive Virtual Reality (VR) experiences for modern VR headsets</li>
                     <li>Optimizing performance for mobile and desktop platforms</li>
@@ -128,11 +128,11 @@ function About() {
 
                 {/* Achievements Section */}
                 <h2 className="text-3xl font-bold text-gray-100 mb-4">Key Achievements</h2>
-                <p className="text-gray-200 text-lg mb-4">
+                <p className="text-gray-200 text-base sm:text-lg mb-4">
                     Over the years, I’ve had the privilege to work on exciting projects that showcase my skills and
                     creativity:
                 </p>
-                <ul className="text-gray-200 text-lg leading-loose list-disc list-inside mb-8 text-left">
+                <ul className="text-gray-200 text-base sm:text-lg leading-loose list-disc list-inside mb-8 text-left">
                     <li>Published 5+ multiplayer games with global player bases</li>
                     <li>100+ Satisfied Clients</li>
                     <li>100% Client Success</li>
@@ -143,7 +143,7 @@ function About() {
 
                 {/* Vision Section */}
                 <h2 className="text-3xl font-bold text-gray-100 mb-4">My Vision</h2>
-                <p className="text-gray-200 text-lg mb-8">
+                <p className="text-gray-200 text-base sm:text-lg mb-8">
                     I believe games have the power to transport players into worlds of wonder, challenge, and joy. My
                     vision is to
                     continue creating experiences that resonate with players and push the boundaries of what's possible
@@ -151,14 +151,14 @@ function About() {
                 </p>
 
                 {/* Call to Action */}
-                <p className="text-gray-200 text-lg">
+                <p className="text-gray-200 text-base sm:text-lg">
                     Interested in collaborating or learning more about my projects? Feel free to reach out or explore my
                     portfolio further.
                 </p>
             </div>
 
             {/* Client Reviews Section */}
-            <div className="mt-12 px-10">
+            <div className="mt-12 px-4 sm:px-10">
                 <h2 className="text-3xl font-bold text-gray-100 text-center mb-8">What My Clients Say</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {reviews.map((review, index) => (
