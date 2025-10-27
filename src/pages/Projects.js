@@ -49,12 +49,6 @@ function Projects() {
                     </p>
                     <div className="mx-auto flex flex-col items-center gap-3 sm:flex-row sm:justify-start md:mx-0">
                         <a
-                            href="mailto:saif@example.com?subject=Project%20Inquiry"
-                            className="btn-aurora rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg"
-                        >
-                            Start a Project Conversation
-                        </a>
-                        <a
                             href="#showreel"
                             className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition-all hover:border-white/40 hover:bg-white/10 hover:text-white"
                         >
