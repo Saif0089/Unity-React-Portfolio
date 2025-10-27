@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import logo1 from "../logo1.svg";
 import logo2 from "../logo2.svg";
 import logo3 from "../logo3.svg";
@@ -191,15 +192,9 @@ function About() {
                         From rapid prototypes to AAA-ready builds, I architect fluid gameplay systems, cinematic visuals, and immersive interactions that ship on every major platform.
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-                        <a href="#projects" className="btn-aurora rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg">
+                        <Link to="/projects" className="btn-aurora rounded-full px-6 py-3 text-sm font-semibold text-white shadow-lg">
                             View Featured Projects
-                        </a>
-                        <a
-                            href="mailto:saif@example.com?subject=Unity%20Project%20Collaboration"
-                            className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition-all hover:border-white/40 hover:bg-white/10 hover:text-white"
-                        >
-                            Let&apos;s Collaborate
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
