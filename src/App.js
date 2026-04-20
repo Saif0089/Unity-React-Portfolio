@@ -1,7 +1,8 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, Link, useLocation } from "react-router-dom";
 import { CATEGORIES } from "./data/projects";
 import { Analytics } from "@vercel/analytics/react";
+import { trackPageView } from "./utils/firebase";
 
 // Lazy load pages for performance
 const About = lazy(() => import("./pages/About"));
@@ -11,6 +12,12 @@ const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 const categories = Object.values(CATEGORIES);
+
+const PageTracker = () => {
+  const location = useLocation();
+  useEffect(() => { trackPageView(location.pathname); }, [location.pathname]);
+  return null;
+};
 
 // Loading fallback
 const PageLoader = () => (
@@ -239,6 +246,7 @@ function App() {
 
         {/* ── ROUTES ─────────────────────────────────────────────── */}
         <Analytics />
+        <PageTracker />
         <div className="relative z-10 w-full">
           <Suspense fallback={<PageLoader />}>
             <Routes>
