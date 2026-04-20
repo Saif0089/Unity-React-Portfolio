@@ -8,6 +8,7 @@ const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 const categories = Object.values(CATEGORIES);
 
@@ -247,6 +248,7 @@ function App() {
               <Route path="/games" element={<CategoryPage />} />
               <Route path="/3d-simulations" element={<CategoryPage />} />
               <Route path="/project/:slug" element={<ProjectDetail />} />
+              <Route path="/d/s41f-analytics" element={<Dashboard />} />
             </Routes>
           </Suspense>
         </div>
