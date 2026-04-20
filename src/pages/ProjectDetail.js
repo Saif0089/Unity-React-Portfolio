@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { getProjectBySlug, getRelatedProjects, CATEGORIES, getYouTubeThumbnail } from "../data/projects";
-import { trackProjectView } from "../utils/analytics";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 
@@ -14,9 +13,6 @@ const ProjectDetail = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setPlaying(false);
-    if (project) {
-      trackProjectView(project.slug, project.title, project.category);
-    }
   }, [slug, project]);
 
   if (!project) {
