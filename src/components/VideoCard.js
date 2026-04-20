@@ -38,7 +38,7 @@ function VideoCard({ title, url, description, techStack = [], index }) {
     return (
         <article
             ref={cardRef}
-            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 p-6 shadow-xl backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-white/30 sm:p-8"
+            className="group relative overflow-hidden rounded-3xl border border-white/8 bg-[rgba(10,10,30,0.6)] p-6 shadow-xl backdrop-blur-2xl saturate-150 transition-all duration-500 hover:-translate-y-2 hover:border-white/14 sm:p-8"
         >
             <div className="pointer-events-none absolute inset-x-14 -top-48 h-56 rounded-full bg-gradient-to-r from-emerald-400/20 via-indigo-400/20 to-purple-500/20 blur-3xl transition duration-700 group-hover:scale-110"></div>
             <div className="relative grid gap-6 lg:grid-cols-[1.05fr,1fr]">
@@ -56,7 +56,7 @@ function VideoCard({ title, url, description, techStack = [], index }) {
                                 {techStack.map((tech) => (
                                     <li
                                         key={`${title}-${tech}`}
-                                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-slate-100/80"
+                                        className="rounded-full border border-white/10 bg-[rgba(10,10,30,0.5)] backdrop-blur-lg px-3 py-1 text-xs font-medium tracking-wide text-slate-100/80"
                                     >
                                         {tech}
                                     </li>
