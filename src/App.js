@@ -118,11 +118,13 @@ function App() {
               </li>
 
               {/* Category links */}
-              <li className="relative group">
+              <li
+                className="relative group"
+                onMouseEnter={() => setShowCategories(true)}
+                onMouseLeave={() => setShowCategories(false)}
+              >
                 <button
                   className="px-4 py-2 rounded-full text-white/50 hover:text-white hover:bg-white/5 transition-all duration-200 flex items-center gap-1"
-                  onMouseEnter={() => setShowCategories(true)}
-                  onMouseLeave={() => setShowCategories(false)}
                 >
                   Categories
                   <svg className="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,16 +132,15 @@ function App() {
                   </svg>
                 </button>
 
-                {/* Dropdown */}
+                {/* Dropdown - pt-2 creates invisible bridge so mouse doesn't leave the <li> */}
                 <div
-                  className={`absolute top-full left-0 mt-1 w-56 glass rounded-xl overflow-hidden transition-all duration-200 ${
+                  className={`absolute top-full left-0 pt-2 w-56 transition-all duration-200 ${
                     showCategories
                       ? "opacity-100 translate-y-0 pointer-events-auto"
                       : "opacity-0 -translate-y-2 pointer-events-none"
                   }`}
-                  onMouseEnter={() => setShowCategories(true)}
-                  onMouseLeave={() => setShowCategories(false)}
                 >
+                <div className="glass rounded-xl overflow-hidden">
                   <div className="py-2">
                     {categories.map((cat) => (
                       <Link
@@ -156,6 +157,7 @@ function App() {
                       </Link>
                     ))}
                   </div>
+                </div>
                 </div>
               </li>
             </ul>
@@ -239,11 +241,9 @@ function App() {
             <Routes>
               <Route path="/" element={<About />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/ar" element={<CategoryPage />} />
-              <Route path="/vr" element={<CategoryPage />} />
+              <Route path="/ar-vr" element={<CategoryPage />} />
               <Route path="/games" element={<CategoryPage />} />
-              <Route path="/3d-interactive" element={<CategoryPage />} />
-              <Route path="/simulation" element={<CategoryPage />} />
+              <Route path="/3d-simulations" element={<CategoryPage />} />
               <Route path="/project/:slug" element={<ProjectDetail />} />
             </Routes>
           </Suspense>

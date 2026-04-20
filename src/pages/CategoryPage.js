@@ -7,11 +7,9 @@ import Footer from "../components/Footer";
 
 // Map route paths to category IDs
 const ROUTE_TO_CATEGORY = {
-  "/ar": "ar",
-  "/vr": "vr",
+  "/ar-vr": "arvr",
   "/games": "games",
-  "/3d-interactive": "3d",
-  "/simulation": "simulation",
+  "/3d-simulations": "3dsim",
 };
 
 const CategoryPage = () => {
