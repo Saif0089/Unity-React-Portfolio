@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { getProjectBySlug, getRelatedProjects, CATEGORIES, getYouTubeThumbnail } from "../data/projects";
+import { trackProjectView } from "../utils/analytics";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 
@@ -13,7 +14,10 @@ const ProjectDetail = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setPlaying(false);
-  }, [slug]);
+    if (project) {
+      trackProjectView(project.slug, project.title, project.category);
+    }
+  }, [slug, project]);
 
   if (!project) {
     return (
@@ -86,20 +90,6 @@ const ProjectDetail = () => {
           {project.client && project.client !== "Studio Project" && project.client !== "Internal" && (
             <p className="text-sm text-white/30">
               Client: <span className="text-white/50">{project.client}</span>
-              {project.websiteUrl && (
-                <>
-                  {" "}&middot;{" "}
-                  <a
-                    href={project.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                    style={{ color: `rgba(${cat.accentRgb}, 0.7)` }}
-                  >
-                    Visit website
-                  </a>
-                </>
-              )}
             </p>
           )}
         </div>

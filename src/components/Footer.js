@@ -57,39 +57,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Navigation */}
           <div>
             <h4 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4">
-              Connect
+              Navigate
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <a
-                  href="mailto:saif@devhouse.co"
-                  className="text-sm text-white/40 hover:text-white transition-colors"
-                >
-                  saif@devhouse.co
-                </a>
+                <Link to="/" className="text-sm text-white/40 hover:text-white transition-colors">
+                  Home
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.linkedin.com/in/saif-ur-rehman-unity/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/40 hover:text-white transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/saifurrehman"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/40 hover:text-white transition-colors"
-                >
-                  GitHub
-                </a>
+                <Link to="/projects" className="text-sm text-white/40 hover:text-white transition-colors">
+                  All Projects
+                </Link>
               </li>
             </ul>
           </div>

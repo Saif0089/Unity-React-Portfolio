@@ -450,15 +450,9 @@ function About() {
             — let's discuss how to bring your vision to life.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="mailto:saif@devhouse.co"
-              className="btn-aurora rounded-full px-8 py-3.5 text-sm font-semibold text-white"
-            >
-              Start a Conversation
-            </a>
             <Link
               to="/projects"
-              className="rounded-full px-8 py-3.5 text-sm font-semibold text-white/60 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
+              className="btn-aurora rounded-full px-8 py-3.5 text-sm font-semibold text-white"
             >
               Browse Portfolio
             </Link>
