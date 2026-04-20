@@ -2,7 +2,7 @@
   {
     "title": "Haki Scaffolding Simulation",
     "url": "https://www.youtube.com/embed/_Wz9zB2GO4o",
-    "description": "An exciting VR experience to simulate different scaffolding for the audience.",
+    "description": "An exciting VR experience to simulate different scaffolding for the audiance.",
     "techStack": ["Unity", "C#", "Photon Networking", "Azure", "VR Headsets"]
   },
   {
